@@ -6,7 +6,7 @@ mic = sr.Microphone()
 
 class main:
     with mic as source:
-        print("Speak your command")
+        print("Speak your command human!!!")
         audioCommand = r.listen(source)
 
     try:
