@@ -10,7 +10,7 @@ class main:
         audioCommand = r.listen(source)
 
     try:
-        print(r.recognize_google(audio))
+        print(r.recognize_google(audioCommand))
     except:
         print("Error occured in processing audio, please try again!")
         sys.exit()
