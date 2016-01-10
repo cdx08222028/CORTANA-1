@@ -8,3 +8,4 @@ class openAppClassMac:
             print("SPLIT : " + splitFile)
             if splitFile in x:
                 useProgram = splitFile
+                os.system("open -a " + useProgram)
