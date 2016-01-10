@@ -4,15 +4,16 @@ from commands.open import openAppClassMac
 from commands.add import addAppClassMac
 
 r = sr.Recognizer()
-mic = sr.Microphone()
 
 class main:
-    with mic as source:
+    with sr.Microphone() as source:
         print("Speak your command: ")
-        audioCommand = r.listen(source)
-        strCommand = r.recognize_google(audioCommand)
-        print(strCommand)
+        strCommand = r.recognize_google(r.listen(source)).lower()
+        
     if "open" in strCommand:
         openAppClassMac.init(strCommand)
-    elif "add" in strCommand:
-        addAppClassMac.init(strCommand)
+
+    elif "thanks" in strCommand:
+        print("See you!")
+        sys.exit()
+        
