@@ -11,7 +11,6 @@ class main:
         with sr.Microphone() as source:
             print("Speak your command: ")
             strCommand = r.recognize_google(r.listen(source)).lower()
-            print(strCommand)
 
             if platform.system() == "Darwin":
                 openAppClassMac.init(strCommand)

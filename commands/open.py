@@ -5,7 +5,6 @@ class openAppClassMac:
         useProgram = ""
         for file in os.listdir("/Applications"):
             splitFile = os.path.splitext(file)[0].lower()
-            print("SPLIT : " + splitFile)
             if splitFile in x:
                 useProgram = splitFile
                 os.system("open -a " + useProgram)
